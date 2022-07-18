@@ -1,0 +1,19 @@
+<RootNode>
+  <Node1 name="test1">
+	<Node2 file="test2" />
+	<Node3 name="test3">
+          <properties>
+            <property1 name="test4" />
+            <property2 name="test5" />
+            <property3 name="test6" />
+            <property4 name="test7" />
+          </Node3>
+	</Node2>
+	<Node4>
+		<myhhhh hhh="test8" />
+	</hhhh>
+   </Node4>
+	<Node5 name="test9">
+		<myfile file="test10" />
+	</Node5>
+</RootNode>
