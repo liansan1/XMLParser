@@ -48,6 +48,27 @@ void XMLNode::ShowNode(XMLNode *node)
 	
 }
 
+XMLNode* XMLNode::DestoryTree(XMLNode *root)
+{
+	if(root == nullptr)
+	{
+		return NULL;
+	}
+	else
+	{
+		XMLNode* tempfir = root->firstchild;
+		XMLNode* tempsib;
+		while (tempfir)
+		{
+			tempsib = tempfir->nextlibling;
+			DestoryTree(tempfir);
+			tempfir = tempsib;
+		}
+		delete root;
+		return nullptr;
+	}
+}
+
 /*使用孩子兄弟表示法创建一个多叉树存储节点数据*/
 void XMLReader::GenerateXMLTree(XMLNode** node,std::string nodename)
 {

@@ -30,10 +30,9 @@ namespace XMLParser {
 	struct XMLNode {
 	public:
 		void ShowNode(XMLNode *root);
-	private:
 		void CreateNode(XMLNode **node, XMLElement element);
 		void InintNode(XMLNode **root, XMLElement element);
-		
+		XMLNode* DestoryTree(XMLNode *root);
 	public:
 		XMLElement Element; //节点数据
 		XMLNode* firstchild; //指向第一个孩子节点的指针
@@ -78,4 +77,7 @@ int main()
 	XMLParser::XMLReader reader;
 	XMLParser::XMLNode* test = reader.XMLFileLoad("D:\\admin.xml");
 	test->ShowNode(test);
+	XMLParser::XMLNode* destory = test->DestoryTree(test);
+	
+	destory->ShowNode(destory);
 }
